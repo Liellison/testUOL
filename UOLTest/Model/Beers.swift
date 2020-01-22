@@ -11,47 +11,45 @@ import Foundation
 // MARK: - Element
 class Beers: Codable {
     let id: Int
-    let name, tagline, firstBrewed, welcomeDescription: String
-    let imageURL: String
+    let name, tagline, description: String
+    let image_url: String
     let abv: Double
     let ibu: Double?
-    let targetFg: Int
-    let targetOg: Double
+    let target_fg: Int
+    let target_og: Double
     let ebc: Int?
     let srm, ph: Double?
-    let attenuationLevel: Double
+    let attenuation_level: Double
     
     init(){
         id = 0
         name = ""
         tagline = ""
-        firstBrewed = ""
-        welcomeDescription = ""
-        imageURL = ""
+        description = ""
+        image_url = ""
         abv = 0
         ibu = 0
-        targetFg = 0
-        targetOg = 0
+        target_fg = 0
+        target_og = 0
         ebc = 0
         srm = 0
         ph = 0
-        attenuationLevel = 0
+        attenuation_level = 0
     }
     
-    init(id: Int, name: String, tagline: String, firstBrewed: String, welcomeDescription: String, imageURL: String, abv: Double, ibu: Double?, targetFg: Int, targetOg: Double, ebc: Int?, srm: Double?, ph: Double?, attenuationLevel: Double) {
+    init(id: Int, name: String, tagline: String, description: String, image_url: String, abv: Double, ibu: Double?, target_fg: Int, target_og: Double, ebc: Int?, srm: Double?, ph: Double?, attenuation_level: Double) {
         self.id = id
         self.name = name
         self.tagline = tagline
-        self.firstBrewed = firstBrewed
-        self.welcomeDescription = welcomeDescription
-        self.imageURL = imageURL
+        self.description = description
+        self.image_url = image_url
         self.abv = abv
         self.ibu = ibu
-        self.targetFg = targetFg
-        self.targetOg = targetOg
+        self.target_fg = target_fg
+        self.target_og = target_og
         self.ebc = ebc
         self.srm = srm
         self.ph = ph
-        self.attenuationLevel = attenuationLevel
+        self.attenuation_level = attenuation_level
     }
 }

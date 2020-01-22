@@ -8,7 +8,7 @@
 
 import Alamofire
 
-enum Beersendpoints {
+enum Beersendpoints: URLRequestConvertible {
     case allBeers
     
     var method: HTTPMethod{
@@ -35,10 +35,8 @@ enum Beersendpoints {
     func asURLRequest() throws -> URLRequest {
         let url = try! "\(Constants.ProductionServer.baseURL)\(path)".asURL()
         var urlRequest = URLRequest(url: url)
-        
         urlRequest.httpMethod = method.rawValue
         urlRequest.setValue(ContentType.json.rawValue, forHTTPHeaderField: HTTPHeaderField.acceptType.rawValue)
-        
         if let parameters = parameters {
             do {
                 urlRequest.httpBody = try JSONSerialization.data(withJSONObject: parameters, options: [])

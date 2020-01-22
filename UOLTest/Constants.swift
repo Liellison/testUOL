@@ -10,7 +10,7 @@ import Foundation
 
 struct Constants{
     struct ProductionServer {
-        static let baseURL = "https://api.punkapi.com/v2/"
+        static let baseURL = "https://api.punkapi.com/v2"
     }
     
     struct APIParameterkey {
